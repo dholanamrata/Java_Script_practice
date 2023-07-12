@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // const a = [68,78,6,2,1];
+        // console.log(a);     //[68, 78, 6, 2, 1]
+
+        // const b = a;
+        // console.log(b);     //[68, 78, 6, 2, 1]
+        // b.push(20);
+        // console.log(a);     //[68, 78, 6, 2, 1, 20]
+
+        // //sorting value------------------------------------
+        // const c = [-2,68,-9,1];
+        // c.sort();
+        // console.log(c);     // [-2, -9, 1, 68]
+
+        //sorting by function---------------------------------
+        // function func()
+        // {
+        //     const arr = [-1,100,25,-10];
+        //     console.log(arr);   //[-1, 25, -10, 100]
+        //     console.log(arr.sort());
+
+        //     console.log(arr);
+        // }
+        // func();
+
+        //array of object---------------------------------------
+        // const player = {
+        //     name: "ACB",
+        //     WinGame: 2,
+        //     loosingGame: 3,
+        //     mostWicket: 4,
+        //     mostRun: 100
+        // }
+        // for(const i in player)
+        // {
+        //     console.log(i + ":"+ player[i]);
+        // }
+
+
+        //---------------------------arrayOfObject-----------------------------
+        // const arrayOfObject = [{ name: "ABC", WinGame: 2, loosingGame: 3, mostWicket: "Rahul", mostRun: "Mehul" },
+        // { name: "XYZ", WinGame: 2, loosingGame: 3, mostWicket: "raghav", mostRun: "mehul" },
+        // { name: "INDIA", WinGame: 5, loosingGame: 3, mostWicket: "pankaj", mostRun: "pandya" },
+        // { name: "GERMAN", WinGame: 62, loosingGame: 3, mostWicket: "mathiyas", mostRun: "yuvraj" },
+        // { name: "US", WinGame: 6, loosingGame: 3, mostWicket: "bhuva", mostRun: "bagha" }]
+
+        // //console.log(arrayOfObject[0].name);     //ABC
+        // // for(let x of arrayOfObject)
+        // // {
+        // //     console.log(x);
+        // // }        
+
+        // const teamName = [];
+        // const winGameName = [];
+        // const LossingGamescor = [];
+        // const mostwicketplayer = [];
+        // const mostRunner = [];
+        // for (let i = 0; i < 5; i++) {
+        //     teamName.push(arrayOfObject[i].name);
+        //     winGameName.push(arrayOfObject[i].WinGame);
+        //     LossingGamescor.push(arrayOfObject[i].loosingGame);
+        //     mostwicketplayer.push(arrayOfObject[i].mostWicket);
+        //     mostRunner.push(arrayOfObject[i].mostRun);
+        // }
+        // console.log("TeamName: " + teamName);
+        // console.log("WinGame: " + winGameName);
+        // console.log("LossingGamescore: " + LossingGamescor);
+        // console.log("Mostwicketplayer: " + mostwicketplayer);
+        // console.log("MostRunner: " + mostRunner);
+
+        // output:
+        // TeamName: ABC, XYZ, INDIA, GERMAN, US
+        // WinGame: 2, 2, 5, 62, 6
+        // LossingGamescore: 3, 3, 3, 3, 3
+        // Mostwicketplayer: Rahul, raghav, pankaj, mathiyas, bhuva
+        // MostRunner: Mehul, mehul, pandya, yuvraj, bagha
+
+        //-----------------Split-------------------------
+        const string = "Mukesh is great man";
+        const word = string.split(' ');     //split by word
+        const arry = [];
+        console.log(arry)
+        arry.push(word[0]);
+        arry.push(word[1]);
+        arry.push(word[2]);
+        arry.push(word[3]);
+
+        console.log(arry);
+        // console.log(word[0]);  //Mukesh
+        // console.log(word);   //['Mukesh', 'is', 'great', 'man']
+
+        // const char = string.split('');  //split by charactor
+        // console.log(char[7]);   //i
+
+        // const strcopy = string.split();
+        // console.log(strcopy);   //['Mukesh is great man']
+
+
+        //-------------------splice-----------------------
+        // const a = [10,20,30,40];
+        // a.splice(1,0,15);
+        // a.splice(3,0,25);
+        // a.splice(5,0,35);
+        // a.splice(7,0,45);
+        // console.log(a);  //[10, 15, 20, 25, 30, 35, 40, 45]
+    </script>
+</body>
+
+</html>

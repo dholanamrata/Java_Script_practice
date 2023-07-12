@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "good morning! how are you? this is john. john is my friend.";
+        let substring = str.split(' ');
+
+        console.log(substring);
+
+        const capitalizedString = function (substring) {
+            for (let i = 0; i < substring.length; i++) {
+
+                // const b = substring[i][0].toUppercase();
+                // console.log(b)
+                // result= a.toUppercase()+substring[i].slice(1);
+                substring[i] = substring[i].charAt(0).toUpperCase() + substring[i].slice(1);
+
+            }
+            const finalString = substring.join(" ");
+            return finalString;
+        }
+
+        console.log(capitalizedString(substring));
+
+        // let Str = str.charAt(0).toUpperCase()+str.slice(1);
+        // console.log(Str);
+    </script>
+</body>
+
+</html>

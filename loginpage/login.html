@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- cdn font-awesome -->
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    
+    <!-- <p class="discription">
+      Marketing is the process of exploring, creating, and delivering value to
+      meet the needs of a target market in terms of goods and services;
+      potentially including selection of a target audience; selecti…
+    </p> -->
+    <header>
+      <div class="header">
+        <div class="combologomenu">
+          <button id="menu" class="menuBtn">
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </button>
+        <div class="logo"></div></div>
+        <nav class="navigation">
+        <div class="sideDrawer">
+          <button class="closeBtn">
+            <svg
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Close Menu"
+              role="img"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              ></path>
+            </svg>
+          </button>
+          <a href="">Home</a>
+          <a href="">Home</a>
+          <a href="">Home</a>
+          <a href="">Home</a>
+        </div>
+        <div class="blank"></div>
+      </nav>
+      </div>
+    </header>
+
+    <form class="master" action="" method="post" id="form">
+      <h1>Login Regestration</h1>
+      <br />
+      <hr />
+      <br />
+      <label for="Email">Email</label>
+      <br />
+      <input type="text" placeholder="@gmail.com" id="email" />
+      <br /><br />
+      <label for="password">Password</label>
+      <br />
+      <input type="password" id="pwd" />
+      <br /><br />
+      <label>
+        <input type="radio" name="gender" id="male" checked />
+        <img
+          src="https://e7.pngegg.com/pngimages/894/494/png-clipart-black-male-symbol-art-avatar-education-professor-user-profile-faculty-boss-face-heroes-thumbnail.png"
+          alt="option2"
+        />
+      </label>
+      &nbsp;&nbsp;
+      <label>
+        <input type="radio" name="gender" id="female" />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JXATtYcCXW6IWuGb0T51X62Q_LcFL7ohIGr6VgnlU6IxjrI2gRtEXaVN2r9jQEScF9a9wzAWO5Y&usqp=CAU&ec=48600113"
+          alt="option1"
+        />
+      </label>
+      <br /><br />
+      <div class="mtdiv" style="border: 1px solid grey"></div>
+      <br /><br />
+      <div class="btnDiv">
+        <button class="btnSubmit">Submit</button>&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btnCancle" onclick="cancle()">
+          Cancel
+        </button>
+      </div>
+    </form>
+    <script src="login.js"></script>
+  </body>
+</html>

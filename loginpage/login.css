@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(../images/business.png); */
+  background-image: url("./img/business.png");
+   background-size: cover; 
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 100vh;
+}
+
+/* -----------------------------header css-------------------------------- */
+header {
+  height: 53px;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(251, 251, 251, 0.16) 0px 1px 4px;
+}
+
+.closeBtn ,.menuBtn{
+  display: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  /* border-radius: 50%; */
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  display: none;
+  cursor: pointer;
+}
+/* .drawer nav{
+  display: block;
+} */
+.header {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  overflow: hidden;
+  /* border:2px solid  rgb(65, 110, 89); */
+}
+.combologomenu{
+  display: flex;
+  width: 100px;
+  justify-content: space-evenly;
+  /* border: 2px solid yellow; */
+}
+
+.logo{
+  font-size: large;
+}
+.sideDrawer {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  /* max-width: 900px; */
+  width: 600px;
+  /* margin-top: 50px; */
+  /* border:2px solid  rgb(47, 0, 255); */
+  justify-content: space-evenly;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: x-large;
+  /* border: 2px solid red; */
+}
+.blur {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  left: 0 !important;
+}
+@media screen and (max-width: 768px) {
+  .menuBtn {
+    display: block;
+  }
+  .logo{
+    display: none;
+  }
+
+  .navigation{
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: -925px;
+      width: 100%;
+      height: 100%;
+      z-index: 300;
+      /* margin-top: 20px; */
+      /* border: 2px solid green; */
+    
+  }
+  .navigation a{  
+  }
+  
+     .blank {
+    height: 100%;
+    /* border:2px solid red; */
+    flex: 1;
+  }
+  .drawer-visible {
+    left: 0 !important;
+  }
+  .closeBtn {
+    display:block;
+    
+    
+  }  
+  
+  .sideDrawer {
+    height: 100vh;
+    width: 10rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    position: absolute;
+    gap: 10px;
+    padding-top: 60px;
+    opacity: 0.8;
+
+  }
+ 
+  a {
+    color: rgb(3, 0, 0);
+    text-decoration: none;
+    font-size: x-large; 
+    padding: 20px;
+  
+  }
+  .hidelogo{
+    display: none;
+  }}
+ 
+/* -------------------------------form css---------------------------------- */
+form {
+  background-color: rgb(254, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+}
+h1 {
+  color: #000714;
+}
+.master {
+  /* padding-left: 10px;
+      padding-bottom: 20px; */
+  padding: 40px;
+  width: 400px;
+  height: auto;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.btnSubmit {
+  align-content: center;
+}
+
+.mtdiv {
+  padding-left: 0px;
+}
+
+#male,
+#female {
+  display: none;
+  visibility: hidden;
+}
+
+/* img+[type=radio]{
+      display: none;
+      visibility: hidden;
+  } */
+[type="radio"]:checked + img {
+  outline: 1px solid #f00;
+}
+
+[type="radio"] {
+  /* position: absolute; */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+/* [type=radio]+img {
+      cursor: pointer;
+  } */
+
+img {
+  width: 50px;
+}
+
+.btnSubmit {
+  padding: 5px;
+}
+
+.btnCancle {
+  padding: 5px;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.success {
+  border: 2px solid green;
+  outline: none;
+}
+
+.error {
+  border: 2px solid red;
+  outline: none;
+}
+.btnSubmit {
+  color: rgb(48, 48, 48);
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  /* neumorphism */
+  border-radius: 30px;
+  background: linear-gradient(145deg, #000206, #05203055);
+  box-shadow: 4px 4px 8px #c1c1c1, -4px -4px 8px #ffffff;
+  margin-left: 15px;
+}
+.btnCancle {
+  color: rgb(48, 48, 48);
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  /* neumorphism */
+  border-radius: 30px;
+  background: linear-gradient(145deg, #000714, #05203055);
+  box-shadow: 4px 4px 8px #c1c1c1, -4px -4px 8px #ffffff;
+  margin-left: 15px;
+}
