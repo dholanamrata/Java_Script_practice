@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to Do list</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e0e0e0;
+        }
+        .MasterDiv {
+            width: 600px;
+            height: 500px;
+            border-radius: 27px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+            padding-top: 60px;
+            /* neumorphism */
+            border-radius: px;
+            background: #e0e0e0;
+            box-shadow: 20px 20px 38px #b1b1b1,
+                -20px -20px 38px #ffffff;
+
+        }
+
+        input[type=text] {
+            border: none;
+            outline: none;
+            padding: 10px 30px;
+            width: 70%;
+            margin-top: 30px;
+            margin-left: 40px;
+            text-decoration: solid;
+            color: rgb(26, 26, 26);
+            /* neumorphism */
+            border-radius: 15px;
+            background: #e0e0e0;
+            box-shadow: inset 4px 4px 8px #c1c1c1,
+                inset -4px -4px 8px #ffffff;
+
+        }
+
+        ::placeholder {
+            color: rgb(48, 48, 48);
+        }
+
+        .AddList {
+            width: 600px;
+            background-color: transparent;
+            padding: 20px;
+            margin-top: 30px;
+            height: 220px;
+           
+        }
+
+        #AddBtn {
+            color: rgb(48, 48, 48);
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            /* neumorphism */
+            border-radius: 30px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 4px 4px 8px #c1c1c1,
+                -4px -4px 8px #ffffff;
+            margin-left: 15px;
+        }
+
+        #AddBtn:active {
+            border-radius: 30px;
+            background: #d6d6d6;
+            box-shadow: inset 4px 4px 8px #b6b6b6,
+                inset -4px -4px 8px #f6f6f6;
+        }
+
+        #Delete {
+            margin-top: 10px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background: #e0e0e0;
+            display: none;
+            color: rgb(78, 51, 51);
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 900;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+        .neumorphism {
+            color: black;
+            text-shadow: inset 4px 4px 8px #c1c1c1,
+                inset -4px -4px 8px #ffffff;
+        }
+
+        #EditBtn {
+            color: rgb(48, 48, 48);
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            /* neumorphism  */
+            border-radius: 30px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 4px 4px 8px #c1c1c1,
+                -4px -4px 8px #ffffff;
+            margin-left: 15px;
+        }
+
+        #EditBtn:active {
+            border-radius: 30px;
+            background: #d6d6d6;
+            box-shadow: inset 4px 4px 8px #b6b6b6,
+                inset -4px -4px 8px #f6f6f6;
+        }
+
+        #DeleteBtn {
+            color: rgb(48, 48, 48);
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            /* neumorphism  */
+            border-radius: 30px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 4px 4px 8px #c1c1c1,
+                -4px -4px 8px #ffffff;
+            margin-left: 15px;
+        }
+
+        #DeleteBtn:active {
+            border-radius: 30px;
+            background: #d6d6d6;
+            box-shadow: inset 4px 4px 8px #b6b6b6,
+                inset -4px -4px 8px #f6f6f6;
+        }
+        .list{
+            display: flex;
+            justify-content: space-around;
+        }
+        .dataDive
+        {
+            width: 10rem;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div clas="bg">
+        <div class="MasterDiv">
+            <h1 class="neumorphism">Grocery Bud</h1>
+            <div>
+                <input type="text" placeholder="Enter here..." class="input">
+                <button id="AddBtn" onclick="myFunction()">Add Work</button>
+            </div>
+            <div class="AddList"></div>
+            <button onclick="DeleteAllBtn(this)" id="Delete">Clear Items</button>
+
+        </div>
+
+    </div>
+    <script>
+        const inputbtn = document.querySelector("input");
+        const AddBtn = document.getElementById("AddBtn");
+        const DivForAddlist = document.querySelector(".AddList");
+        let changeFlage = false;
+        let changeElement;
+
+        AddBtn.addEventListener("click", () => {
+            let data = inputbtn.value;
+            if (data !== "" && !changeFlage) //changeFlage=true
+            {
+                DivForAddlist.innerHTML += 
+                `<div class="list">
+                    <div class="dataDive"><span>${data}</span></div>
+                    <div>
+                         <button id="EditBtn" onclick="EditBtn(this)">Edit</button>
+                        <button id="DeleteBtn" onclick="DeleteBtn(this)">Delete</button>
+                    </div>
+                </div>`
+                inputbtn.value = "";
+                // let children = DivForAddlist.children; 
+                // console.log(children);  
+
+            }
+            else if (data !== "" && changeFlage) //changeFlage=false
+            {
+                changeElement.innerHTML = data;
+                inputbtn.value = "";
+                AddBtn.textContent = "Add";
+                changeFlage = false;
+            }
+        })
+        function DeleteBtn(object) {
+            DivForAddlist.removeChild(object.parentElement.parentElement)
+        }
+        function EditBtn(object) {
+            changeElement = object.parentElement.previousSibling.previousSibling.children[0];
+            inputbtn.value = changeElement.innerHTML;
+            changeFlage = true;
+            AddBtn.textContent = "Edit";
+        }
+        function DeleteAllBtn(object) {
+            DivForAddlist.innerHTML = "";
+        }
+
+        function myFunction() {
+
+
+            // document.getElementById("Delete").style.display = "visible";
+            document.getElementById("Delete").style.visibility = "visible"
+
+        }
+        function myFunction() {
+            var x = document.getElementById("Delete");
+            x.style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>

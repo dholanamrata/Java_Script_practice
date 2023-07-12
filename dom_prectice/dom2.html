@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>The <img id="img1" src="../images/cat.jpg" alt="Cat" style="width: 600px; height: 500px;">in the 
+        <img id="img2" src=".././images/pexels-jude-stevens-984619.jpg" style="width: 600px; height: 500px;" alt="Hat"></p>
+<button id="btn" >submit</button>
+
+<body>
+    <script>
+        //Q-1
+        // const btnforclick = document.getElementById("btn");
+        // const image1 = document.getElementById("img1");
+        // const image2 = document.getElementById("img2");
+
+
+        // const clickbtn = ()=>{
+        //     image1.setAttribute('src',' ');
+        //     image1.setAttribute('alt','Cat')
+
+        //     image2.setAttribute('src',' ');
+        //     image2.setAttribute('alt','hat');            
+        // }
+        // btnforclick.addEventListener("click",clickbtn);
+
+
+        //Q-2
+        const tableNode = document.createElement("table");
+        document.body.appendChild(tableNode);
+        const trNode1 = document.createElement("tr");
+        tableNode.appendChild(trNode1);
+        const thNode1 = document.createElement("th");
+        trNode1.appendChild(thNode1);
+        const thNode2 = document.createElement("th");
+        trNode1.appendChild(thNode2);
+        const thNode3 = document.createElement("th");
+        trNode1.appendChild(thNode3);
+
+
+        const trNode2 = document.createElement("tr");
+        tableNode.appendChild(trNode2);
+        const tdNode4 = document.createElement("td");
+        trNode2.appendChild(tdNode4);
+        const tdNode5 = document.createElement("td");
+        trNode2.appendChild(tdNode5);
+        const tdNode6 = document.createElement("td");
+        trNode2.appendChild(tdNode6);
+
+        const textNode = document.createTextNode("name");
+        thNode1.appendChild(textNode)
+        const textNode2 = document.createTextNode("height");
+        thNode2.appendChild(textNode2)
+        const textNode3 = document.createTextNode("place");
+        thNode3.appendChild(textNode3)
+
+        const textNode4 = document.createTextNode("kilimanjaro");
+        tdNode4.appendChild(textNode4)
+        const textNode5 = document.createTextNode("5895");
+        tdNode5.appendChild(textNode5)
+        const textNode6 = document.createTextNode("tanzania");
+        tdNode6.appendChild(textNode6)
+
+        // const arrayOfObject = [{ name: "namrata" }, { name: "dhola" }];
+        // const xyz = (arrayOfObject) => {
+        //     const pqr = [];
+        //     for (let x of arrayOfObject) {
+        //         pqr.push(x.name);
+        //     }
+        //     console.log(pqr);
+        // }
+        // xyz(arrayOfObject); 
+        
+        // const tableNode = document.createElement("table");
+        // const tableBody = document.createElement("tbody");
+        // for(let i=0;i<5;i++)
+        // {
+        //     const row = document.createElement("tr")
+        //     for(let j=0;i<5;j++)
+        //     {
+        //         const column = document.createElement("td");
+        //         const textNode = document.createTextNode(i,j);
+        //         column.appendChild(textNode);
+        //         row.appendChild(column);
+        //     }
+        //     tableBody.appendChild(row)
+        // }
+        // tableNode.appendChild(tableBody);
+        // document.body.appendChild(tableNode);
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

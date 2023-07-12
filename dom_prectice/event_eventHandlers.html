@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- onclick="clickbtn()" -->
+<p>
+    Submit your document
+    <button id="btn" onkeyup="checkFunction()"> click here </button>
+    <a href="https://www.google.com/search?gs_ssp=eJzj4tTP1TewzEouK1ZgNGB0YPBir8wvLSlNSgUAUQAG7g&q=youtube&rlz=1C1CHBD_enIN1013IN1013&oq=you&aqs=chrome.1.69i59j46i131i199i433i465i512j46i131i433i512j0i131i433i512l2j69i60j69i61l2.1854j0j4&sourceid=chrome&ie=UTF-8">YOUTUBE</a>
+</p>
+
+<body>
+    <script>
+        const btnforclick = document.getElementById("btn");
+        const anchor = document.getElementsByTagName("a")[0];
+
+        const clickbtn = ()=>{
+            console.log("submit");
+            btnforclick.removeEventListener("click",clickbtn);
+        }
+
+        btnforclick.addEventListener("click",clickbtn);
+        //butten ni event create thase and 1 var click pr submit aavshe biji var nai aave jyare onlick way thi avya karshe submit submit...
+
+        const checkFunction = ()=>{
+            console.log("welcome");
+        }
+        //key press jetli var karsho atli var welcome print thashe
+
+        const prevent =(e)=>{
+            e.preventDefault();
+            console.log(e.target.href);
+        }
+        anchor.addEventListener("click",prevent);
+        //click pr link show thashe then href pr move thase...ana thi apde keva data user pase jay che a joy shkiye preventDefault() thi..
+
+        const paragraph = document.getElementsByTagName("p")[0];
+        window.addEventListener("keypress",(e)=>
+        {
+            if(e.key==='a')
+            {
+                paragraph.style.backgroundColor="yellow"
+            }
+        })
+        window.addEventListener("keyup",(e)=>
+        {
+            if(e.key==='a')
+            {
+                paragraph.style.backgroundColor="blue"
+            }
+        })
+        //button pr keypress and keyup pr paragraph no color change thashe
+
+
+
+
+
+    </script>
+</body>
+
+</html>

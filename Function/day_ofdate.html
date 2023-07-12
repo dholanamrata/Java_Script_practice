@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const todayDate =new Date(Date.UTC(2012, 11, 21));
+        console.log(todayDate.toLocaleDateString('de-DE'));
+        const date=(todayDate)=>
+        {
+            const dayOfWeek =['sunday','monday','tuesday','wednesday','thrusday','friday','saturday'];
+            const dayOfIndex = todayDate.getDay(); 
+            const dayOfWeek1 = dayOfWeek[dayOfIndex];
+            console.log(dayOfWeek1);
+        }
+        date(todayDate);
+    </script>
+</body>
+</html>

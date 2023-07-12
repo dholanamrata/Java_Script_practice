@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: rebeccapurple;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+            width: 50%;
+            text-align: center;
+            background-color: #df666650;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+
+        .cantainer {
+
+            border-radius: 5px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cantainer">
+        <div class="bg">
+            <form action="" class="bg">
+                <h1 class="heading">A very warm welcome to you! <br>It is lovely to have you among us!</h1><br>
+                <label for="fname" style="gap: 20px;">First Name: </label>
+                <input type="text" placeholder="Enter your name...."><br><br>
+                <label for="lname">Last Name: </label>
+                <input type="text" placeholder="Enter your lastname...."><br><br>
+                <label for="country">Country: </label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select><br><br>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                    style="height:200px"></textarea><br><br>
+
+                <input type="submit" value="Submit"><br><br>
+                <div id="random">
+                    <p>Lorem1 ipsum dolor sit amet-1.</p>
+                    <p>Lorem2 ipsum dolor sit amet-2.</p>
+                    <p>Lorem3 ipsum dolor sit amet-3.</p>
+                    <P></P>
+                </div>
+            </form>
+        </div>
+</body>
+
+<script>
+    // ----------------tag id class with Dom manuplation -----------------
+    // const arr = document.getElementsByTagName("h1");
+    // console.log(arr);
+
+    // const arr = document.getElementsByClassName("heading")[0];
+    // console.log(arr);
+
+    // const arr = document.getElementById("country")
+    // console.log(arr);
+
+    // const arr =document.getElementsByName("country");
+    // console.log(arr);
+
+    // const arr = document.querySelectorAll("label");
+    // console.log(arr);
+
+    // const arr = document.querySelector("label");
+    // console.log(arr);
+
+    const division = document.getElementById("random");
+    console.log(division.childNodes);   //NodeList(7) [text, p, text, p, text, p, text]
+    console.log(division.children);     //HTMLCollection(3) [p, p, p]
+
+    const paragraph = document.getElementsByTagName("p");
+    //console.log(paragraph[0].parentNode);       //<div id="random">…</div>
+    //console.log(paragraph[0].innerHTML);    //Lorem1 ipsum dolor sit amet.
+
+    // division.insertBefore(paragraph[2], paragraph[0]);
+    // console.log(paragraph[0].innerHTML);
+    //Lorem1 ipsum dolor sit amet.
+    //Lorem3 ipsum dolor sit amet.
+
+    //division.replaceChild(paragraph[2], paragraph[0]);
+    //Lorem2 ipsum dolor sit amet - 2.
+    //Lorem1 ipsum dolor sit amet - 1.
+
+    //INSERT TEXT NODE IN EMPTY TAG:
+    const textNode = document.createTextNode("Lorem4 ipsum dolor sit amet-4");
+    paragraph[3].appendChild(textNode);
+
+    //create new element node:
+
+    const newTextNode = document.createTextNode("Lorem5 fdgdrfg -5");
+    const newElementNode = document.createElement("p");
+    newElementNode.appendChild(newTextNode);
+    division.appendChild(newElementNode);
+
+    //set attribute:
+    division.setAttribute("class","div1");
+    const class1 = division.getAttribute("class");
+    console.log(class1);
+
+    newElementNode.setAttribute("id","p1");
+    const id = newElementNode.getAttribute("id");
+    console.log(id);
+</script>
+</html>

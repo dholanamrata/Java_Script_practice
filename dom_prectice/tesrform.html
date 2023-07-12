@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- cdn font-awesome -->
+    <title>Document</title>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .master {
+        border: solid 2px gray;
+        /* padding-left: 10px;
+        padding-bottom: 20px; */
+        padding: 40px;
+        width: 200px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+
+    .btnSubmit {
+        align-content: center;
+    }
+
+    .mtdiv {
+        padding-left: 0px;
+    }
+
+    #male,
+    #female {
+        display: none;
+        visibility: hidden;
+
+    }
+
+    /* img+[type=radio]{
+        display: none;
+        visibility: hidden;
+    } */
+    [type=radio]:checked+img {
+        outline: 1px solid #f00;
+    }
+
+    [type=radio] {
+        /* position: absolute; */
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* IMAGE STYLES */
+    /* [type=radio]+img {
+        cursor: pointer;
+    } */
+
+    img {
+        width: 50px;
+    }
+
+    .btnSubmit {
+        padding: 5px;
+    }
+
+    .btnCancle {
+        padding: 5px;
+    }
+
+    .btnDiv {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+
+<body>
+    <form class="master" action="" method="post" id="form">
+        <h1>Login Regestration</h1>
+        <br>
+        <hr>
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="text" placeholder="@gmail.com" id="email">
+        <br><br>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="pwd">
+        <br><br>
+        <label>
+            <input type="radio" name="gender" id="male" checked>
+            <img src="https://e7.pngegg.com/pngimages/894/494/png-clipart-black-male-symbol-art-avatar-education-professor-user-profile-faculty-boss-face-heroes-thumbnail.png"
+                alt="option2">
+        </label>
+        &nbsp;&nbsp;
+        <label>
+            <input type="radio" name="gender" id="female">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JXATtYcCXW6IWuGb0T51X62Q_LcFL7ohIGr6VgnlU6IxjrI2gRtEXaVN2r9jQEScF9a9wzAWO5Y&usqp=CAU&ec=48600113"
+                alt="option1">
+        </label>
+        <br><br>
+        <div class="mtdiv" style="border: 1px solid grey; "></div>
+        <br><br>
+        <div class="btnDiv">
+            <button class="btnSubmit">Submit</button>&nbsp;&nbsp;&nbsp;
+            <button type="reset" class="btnCancle" onclick="cancle()">Cancel</button>
+        </div>
+    </form>
+    <script>
+        const anchor = document.getElementById("form");
+        const prevent =(e)=>{
+            e.preventDefault();
+            for (const iterator of e.target) {
+                if(iterator.value===""){
+                    continue
+                }
+                console.log(iterator.value);
+            }
+            
+
+        }
+        anchor.addEventListener("submit",prevent)
+        
+        
+
+    </script>
+</body>
+
+</html>

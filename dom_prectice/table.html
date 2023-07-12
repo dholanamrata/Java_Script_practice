@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const arrayOfObject = [
+            { name: "raj", height: "5", place: "surat" },
+            { name: "jay", height: "5.5", place: "surat" },
+            { name: "vijay", height: "4.5", place: "surat" },
+            { name: "kajal", height: "4.5", place: "surat" },
+            { name: "viru", height: "6.5", place: "surat" }
+        ];
+
+        const table = (singleData) => {
+            const tableNode = document.createElement("table");
+            const tableBody = document.createElement("tbody");
+            
+
+            // for (let i = 0; i < singleData.length; i++) {
+            //     const row = document.createElement("tr");
+            //     let column;
+            //     for (let j = 0; j < singleData.length; j++) {
+            //         column = document.createElement("td");
+            //         const textNode = document.createTextNode(singleData[i].name);
+            //         column.appendChild(textNode);
+            //         row.appendChild(column);
+            //     }
+            //     tableBody.appendChild(row)
+            // }
+            // tableNode.appendChild(tableBody);
+            // document.body.appendChild(tableNode);
+
+        }
+
+        table(arrayOfObject);
+
+
+        // for (let x of arrayOfObject) {
+        //     console.log(x);
+        // }
+        // arrayOfObject.forEach()
+        // {
+        //     console.log(arrayOfObject[i]=table[i]);
+        // }
+
+        arrayOfObject.forEach((item, index) => {
+            console.log("ITEM", item);
+            table(item);
+        });
+    </script>
+</body>
+
+</html>

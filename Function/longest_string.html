@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = ["apple", "banana", "pear", "orange", "watermelon"];
+        let findString = "" ;
+        const longestString = function(str)
+        {
+            for(let i=0; i<str.length; i++)
+            {
+               if(str[i].length>findString.length)
+               {
+                findString=str[i];
+               }
+            }
+            return findString.length;
+        }
+       console.log(longestString(str));
+    </script>
+</body>
+</html>

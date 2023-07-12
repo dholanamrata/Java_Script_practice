@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const peopleNode = document.createElement("people");    
+    document.body.appendChild(peopleNode);
+    const personNode = document.createElement("person");
+    peopleNode.appendChild(personNode);
+    const addressNode = document.createElement("address");
+    peopleNode.appendChild(addressNode);
+    const addressNode1 = document.createElement("address");
+    peopleNode.appendChild(addressNode1);
+
+    personNode.setAttribute("first-name","eric");
+    personNode.setAttribute("middle-intial","H");
+    personNode.setAttribute("last-name","jung");
+
+    addressNode.setAttribute("street","123 main st");
+    addressNode.setAttribute("city","denver");
+    addressNode.setAttribute("state","co");
+    addressNode.setAttribute("country","usa");
+
+    addressNode1.setAttribute("street","123 main st");
+    addressNode1.setAttribute("city","arlington");
+    addressNode1.setAttribute("state","ma");
+    addressNode1.setAttribute("country","usa");
+    
+    const personNode1 = document.createElement("person");
+    peopleNode.appendChild(personNode1);
+    const addressNode3 = document.createElement("address");
+    personNode1.appendChild(addressNode3);
+    const addressNode4 = document.createElement("address");
+    personNode1.appendChild(addressNode4);
+    const addressNode5 = document.createElement("address");
+    personNode1.appendChild(addressNode5);
+
+    addressNode3.setAttribute("street","321 north st");
+    addressNode3.setAttribute("city","atlanta");
+    addressNode3.setAttribute("state","ga");
+    addressNode3.setAttribute("country","usa");
+
+    addressNode4.setAttribute("street","123 north st");
+    addressNode4.setAttribute("city","seattle");
+    addressNode4.setAttribute("state","wa");
+    addressNode4.setAttribute("country","usa");
+
+    addressNode5.setAttribute("street","321 north st");
+    addressNode5.setAttribute("city","avenue");
+    addressNode5.setAttribute("state","co");
+    addressNode5.setAttribute("country","usa");
+
+    
+</script>
+
+</html>
